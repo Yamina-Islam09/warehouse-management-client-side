@@ -1,6 +1,7 @@
 import React from 'react';
 import useItems from '../../hooks/useItems';
-
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ManageItems = () => {
     const [items, setItems] = useItems();
 
@@ -24,10 +25,20 @@ const ManageItems = () => {
             <h2>Manage your items</h2>
             {
                 items.map(item => <div key={item._id}>
-                    <h5>{item.name} <button onClick={() => handleDelete(item._id)}>X</button></h5>
+                <div className='border border-success d-flex align-items-center justify-content-evenly mb-5 '>
+                <div>
+                <img src={item.img} alt="" height={40} width={20}/>
+                </div>
+                <div><h4>{item.name} </h4></div>
+                <button onClick={() => handleDelete(item._id)}>
+                <FontAwesomeIcon className='delete-icon' icon={faTrashAlt}></FontAwesomeIcon>
+                </button>
+                </div>
                     
                 </div>)
             }
+            
+           
         </div>
     );
 };
