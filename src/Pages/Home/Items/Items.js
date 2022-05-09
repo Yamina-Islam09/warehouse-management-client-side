@@ -4,7 +4,6 @@ import './Items.css';
 import Loading from '../../Shared/Loading/Loading';
 
 const Items = () => {
-    const [isLoading, setIsLoading] = useState(true);
 
     const [items, setItems] = useState([]);
 

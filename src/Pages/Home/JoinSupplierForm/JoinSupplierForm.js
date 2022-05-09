@@ -2,7 +2,7 @@ import React from 'react';
 
 const JoinSupplierForm = () => {
     return (
-        <div className='container mx-auto mt-5 border border-success'>
+        <div id='join' className='container mx-auto mt-5 border border-success'>
             <h2 className='text-center text-success mt-4 mb-5'>Join Supplier Team </h2>
          <form className="row g-3 needs-validation" novalidate>
   <div className="col-md-6">

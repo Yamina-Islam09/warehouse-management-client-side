@@ -4,7 +4,7 @@ import { Carousel } from 'react-bootstrap';
 const LatestItem = () => {
  
   return (
-    <div className="container mx-auto mt-5">
+    <div id='buyers' className="container mx-auto mt-5">
       <h2 className="text-center text-success mb-4">Reliable Buyers</h2>
      
       <div className=' text-center '>
