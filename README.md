@@ -1,6 +1,6 @@
 # Getting Started with MObile Store  React App
 
-This project was bootstrapped with [Create MobileStore React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create MobileStore React App](https://assignment-11-2f56a.web.app).
 
 * user can browse home page and see the 6 products.
 * loading animation while fetching data.
