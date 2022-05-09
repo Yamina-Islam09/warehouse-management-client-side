@@ -9,10 +9,11 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageItems from './Pages/ManageItems/ManageItems';
-import MyOrders from './Pages/MyOrders/MyOrders';
+import MyItem from './Pages/MyItem/MyItem'
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/item/:itemId' element={<ItemDetails></ItemDetails>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         {/* <Route path="/checkout/:serviceId" element={
           <RequireAuth>
@@ -40,9 +42,9 @@ function App() {
             <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
-        <Route path="/orders" element={
+        <Route path="/myitems" element={
           <RequireAuth>
-            <MyOrders></MyOrders>
+            <MyItem></MyItem>
           </RequireAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

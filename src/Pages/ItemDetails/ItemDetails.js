@@ -8,17 +8,29 @@ const ItemDetails = () => {
 
     return (
         <div>
-            <h2>You are about to book: {item.name}</h2>
-            <img src={item.img} alt="" />
-            <p>{item.quantity}</p>
-            <p>{item.description}</p>
-            <p>{item.supplyName}</p>
-            <p>{item.price}</p>
-            <div className='text-center'>
-                
-                    <button className='btn btn-primary'>Delivered</button>
+            <div class="container mx-auto">
+  <div class="row">
+    <div class="col">
+    <img src={item.img} alt="" />
+    </div>
+    <div class="col">
+    <h2>You are about to book: {item.name}</h2>
+           
+           <p>{item.quantity}</p>
+           <p>{item.description}</p>
+           <p>{item.supplyName}</p>
+           <p>{item.price}</p>
+           <div className='text-center'>
                
-            </div>
+                   <button className='btn btn-success w-100'>Sold</button>
+                   
+                   <button className='btn btn-success w-100'>Restock</button>
+              
+           </div>
+    </div>
+  </div>
+  </div>
+            
         </div>
     );
 };
