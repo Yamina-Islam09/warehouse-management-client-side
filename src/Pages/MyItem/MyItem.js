@@ -16,7 +16,7 @@ const MyItem =() => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://desolate-river-99290.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -29,13 +29,13 @@ const MyItem =() => {
         }
     }
     useEffect( () => {
-        // fetch(`http://localhost:5000/myitem?email=${email}`)
+        // fetch(`https://desolate-river-99290.herokuapp.com/myitem?email=${email}`)
         // .then(res=>res.json())
         // .then(data=>setItems(data))
         
         const getItems = async() =>{
             const email = user?.email;
-            const url = `http://localhost:5000/myitem?email=${email}`;
+            const url = `https://desolate-river-99290.herokuapp.com/myitem?email=${email}`;
             
             try{
                 const {data} = await axiosPrivate.get(url);

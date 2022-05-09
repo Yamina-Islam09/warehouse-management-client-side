@@ -5,14 +5,14 @@ const ItemDetails = () => {
     const { itemId } = useParams();
     const [items,setItems]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/item/${itemId}`)
+        fetch(`https://desolate-river-99290.herokuapp.com/item/${itemId}`)
         .then(res=>res.json())
         .then(data=>setItems(data))
       },[])
 
       const decreseitem=()=>{
         const{_id,img,price,name,quantity,supplyName,description}=items;
-        const url=`http://localhost:5000/item/${itemId}`;
+        const url=`https://desolate-river-99290.herokuapp.com/item/${itemId}`;
         let value=quantity-1;
         //send to server side
         fetch(url,{
@@ -32,7 +32,7 @@ const ItemDetails = () => {
         event.preventDefault();
         const qtn=parseInt(event.target.quantity.value);
         let value=parseInt(quantity)+qtn;
-        const url=`http://localhost:5000/item/${itemId}`;
+        const url=`https://desolate-river-99290.herokuapp.com/item/${itemId}`;
         fetch(url,{
             method:'PUT',
             headers:{

@@ -6,7 +6,7 @@ const AddItem = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/item`;
+        const url = `https://desolate-river-99290.herokuapp.com/item`;
         fetch(url, {
             method: 'POST',
             headers: {
