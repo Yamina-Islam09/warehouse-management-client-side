@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import './Home.css';
 import LatestItem from "../LatestItem/LatestItem";
 import JoinSupplierForm from "../JoinSupplierForm/JoinSupplierForm";
-
+import Loading from '../../Shared/Loading/Loading';
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,6 +16,7 @@ const Home = () => {
       fetch('http://localhost:5000/item')
       .then(res => res.json())
       .then(data =>{
+        setIsLoading(false)
           setItems(data)} );
   }, [])
   return (
@@ -27,11 +28,11 @@ const Home = () => {
          <h1 className='text-success text-center mt-3 mb-3'> Stored Items</h1>
          <div className="items-container">
         
-     
+   { isLoading && <Loading></Loading>}
           { items.slice(0,6).map(item => <Item key={item._id} item={item}>
              </Item>)
          }
-           
+     
          </div>
          </div>
      </div>
