@@ -23,8 +23,10 @@ const ItemDetails = () => {
            <div className='text-center'>
                
                    <button className='btn btn-success w-100'>Sold</button>
-                   
+                   <form action="">
+                   <input type="number" name="" id="" />
                    <button className='btn btn-success w-100'>Restock</button>
+                   </form>
               
            </div>
     </div>

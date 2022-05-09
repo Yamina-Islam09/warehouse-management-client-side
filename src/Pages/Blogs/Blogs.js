@@ -35,7 +35,7 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div className="ccol">
+        <div className="col">
           <div
             className="p-3 border border-danger bg-light"
             style={{ height: 'auto '}}
@@ -44,7 +44,24 @@ const Blogs = () => {
               Difference between javascript and nodejs
             </h2>
             <p>
-              sql is a relational database, nosql is a non-relational database.
+               javascript is a client side scripting
+              language and nodejs is a server side scripting language.
+              javascript is used to create web pages and nodejs is used to
+              create web servers. javascript is a programming language and node
+              js is a runtime for javascript.
+            </p>
+          </div>
+        </div>
+        <div className="col">
+          <div
+            className="p-3 border border-danger bg-light"
+            style={{ height: 'auto '}}
+          >
+            <h2 style={{ color: "black" }}>
+              Difference between sql and nosql
+            </h2>
+            <p>
+            sql is a relational database, nosql is a non-relational database.
               sql is a query language, nosql is a data language. sql is a
               structured language, nosql is an unstructured language. sql is a
               relational language, nosql is a non-relational language. sql is a
@@ -55,11 +72,7 @@ const Blogs = () => {
               nosql is an unstructured language. sql is a relational language,
               nosql is a non-relational language. sql is a query language, nosql
               is a data language. sql is a structured language, nosql is an
-              unstructured language. javascript is a client side scripting
-              language and nodejs is a server side scripting language.
-              javascript is used to create web pages and nodejs is used to
-              create web servers. javascript is a programming language and node
-              js is a runtime for javascript.
+              unstructured language.
             </p>
           </div>
         </div>
