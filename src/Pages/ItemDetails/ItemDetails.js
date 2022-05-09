@@ -1,10 +1,42 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useItemDetail from '../../hooks/useItemDetail';
 
 const ItemDetails = () => {
+    const [quantity,setQuantity]=useState({});
     const { itemId } = useParams();
     const [item] = useItemDetail(itemId);
+      
+      useEffect( () =>{
+        const url = `http://localhost:5000/item/${itemId}`;
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setQuantity(data));
+    }, []);
+
+    // const handleUpdateUser = event =>{
+    //     event.preventDefault();
+    //     const name = event.target.name.value;
+    //     const email = event.target.email.value;
+
+    //     const updatedUser = {name, email};
+
+    //     // send data to the server
+    //     const url = `http://localhost:5000/user/${id}`;
+    //     fetch(url, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(updatedUser)
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //         console.log('success', data);
+    //         alert('users added successfully!!!');
+    //         event.target.reset();
+    //     })
+    // }
 
     return (
         <div>
@@ -23,7 +55,7 @@ const ItemDetails = () => {
            
            <div className='text-center'>
                
-                   <button className='btn btn-success w-100'>Sold</button>
+                   <button className='btn btn-success w-100'>Deliver</button>
                    <form className='mt-2 mb-5'>
                    <input type="number" className='mb-2 w-100' name="" id="" />
                    <button className='btn btn-success w-100'>Restock</button>
